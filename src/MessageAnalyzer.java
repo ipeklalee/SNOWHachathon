@@ -35,7 +35,6 @@ public class MessageAnalyzer
             }
         }
         
-        System.out.println("TEXT: " + text);
         //Count to catch two headers cnt=2 means we have hit two headers
         int cnt = 0;
         
@@ -48,7 +47,6 @@ public class MessageAnalyzer
         //Each word in the text is traced
         for(int i=0; i<separatedText.size(); i++)
         {
-        		System.out.println("Word: " + separatedText.get(i));
         		//Each header is traced
         		for(String s:headerArray)
         		{
@@ -79,7 +77,6 @@ public class MessageAnalyzer
         //iterate through the header content map
         Iterator it = headerContentMap.entrySet().iterator();
 		System.out.println("HEADERS");
-		int l=0;
 	    while (it.hasNext()) 
 	    {
 	    		l++;
@@ -87,6 +84,5 @@ public class MessageAnalyzer
 	        System.out.println("HEADER: " + pair.getKey() + " CONTENT: " + pair.getValue());
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }
-	    System.out.println(l);
 	}
 }
